@@ -1,0 +1,63 @@
+{
+  "name": "@mcbeutils/docgen",
+  "author": "Nobu <chat@nobu.sh>",
+  "description": "Documentation generator tuned to our styles :3",
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "bin",
+  "bin": {
+    "docgen": "bin/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "husky install",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "prettier": "prettier --write src",
+    "format": "npm run lint && npm run prettier",
+    "format:fix": "npm run lint:fix && npm run prettier"
+  },
+  "homepage": "https://github.com/MCBE-Utilities/docgen#readme",
+  "bugs": {
+    "url": "https://github.com/MCBE-Utilities/docgen/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MCBE-Utilities/docgen.git"
+  },
+  "files": [
+    "bin"
+  ],
+  "keywords": [
+    "typescript",
+    "documentation",
+    "generator",
+    "doc",
+    "docs",
+    "gen",
+    "docgen"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "engineStrict": true,
+  "dependencies": {
+    "module-alias": "^2.2.2",
+    "yargs": "^17.4.1"
+  },
+  "devDependencies": {
+    "@types/module-alias": "^2.0.1",
+    "@types/node": "^17.0.25",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.13.0",
+    "eslint-config-marine": "^9.4.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3"
+  }
+}

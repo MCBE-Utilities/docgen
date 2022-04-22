@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    // Formatting
+    "strict": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "useUnknownInCatchVariables": true,
+
+    // Module
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+
+    // Decaration Emission
+    "declaration": false,
+    "importHelpers": true,
+    "importsNotUsedAsValues": "error",
+    "inlineSources":  false,
+    "newLine": "lf",
+    "noEmitHelpers": false,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // ModuleType & Formatting
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+
+    // Compilation
+    "baseUrl": "src",
+    "rootDir": "src",
+    "outDir": "bin",
+
+    // Types
+    "paths": {},
+    "typeRoots": [
+      "@types/",
+      "./node_modules/@types"
+    ],
+    "types": ["node"],
+
+    // Libs have broken typescript :shrug:
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*.ts",
+  ]
+}
