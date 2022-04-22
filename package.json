@@ -1,7 +1,7 @@
 {
   "name": "@mcbeutils/docgen",
   "author": "Nobu <chat@nobu.sh>",
-  "description": "Documentation generator tuned to our styles :3",
+  "description": "📜 Our Official Documentation Generator",
   "license": "MIT",
   "version": "1.0.0",
   "main": "bin",
