@@ -13,5 +13,3 @@ These are both things we plan to change in the future to make this tool more ver
 
 ## Config
 See [CONFIG.md](./CONFIG.md) for more information on setting up docgen configuration file.
-
-#### `Test`
