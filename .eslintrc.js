@@ -22,11 +22,12 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     project: './tsconfig.eslint.json',
   },
-  ignorePatterns: ['**/bin/*', 'node_modules'],
+  ignorePatterns: ['**/bin/*'],
   plugins: ['@typescript-eslint', 'import', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
     indent: ['error', 2],
+    // quotes: ['error', 'single'],
     '@typescript-eslint/restrict-template-expressions': 0,
     '@typescript-eslint/no-unnecessary-condition': 0,
     '@typescript-eslint/prefer-ts-expect-error': 0,
@@ -35,6 +36,5 @@ module.exports = {
     'no-use-before-define': 0,
     'no-redeclare': 0,
     'eol-last': ['error', 'always'],
-    quotes: ['error', 'single'],
   },
 }

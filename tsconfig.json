@@ -43,7 +43,10 @@
     "outDir": "bin",
 
     // Types
-    "paths": {},
+    "paths": {
+      "@utils": ["utils/index"],
+      "@types": ["types/index"]
+    },
     "typeRoots": [
       "@types/",
       "./node_modules/@types"
@@ -51,7 +54,7 @@
     "types": ["node"],
 
     // Libs have broken typescript :shrug:
-    "skipLibCheck": true
+    "skipLibCheck": true,
   },
   "include": [
     "src/**/*.ts",
