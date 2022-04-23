@@ -1,13 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://https://github.com/MCBE-Utilities/docgen/docgen.schema.json",
+  "$id": "https://mcbe-utilities.github.io/docgen/docgen.schema.json",
   "title": "JSON schema for MCBE Utilities docgen configuration files",
   "definitions": {
     "buildOptionsDefinition": {
       "properties": {
         "root": {
           "description": "Specify the root folder in which all generated *.d.ts files are located.",
-          "markdownDescription": "Specify the root folder in which all generated *.d.ts files are located.\n\nSee more: "
+          "markdownDescription": "Specify the root folder in which all generated *.d.ts files are located.\n\nSee more: https://github.com/MCBE-Utilities/docgen/blob/main/CONFIG.md#root"
         }
       }
     }
