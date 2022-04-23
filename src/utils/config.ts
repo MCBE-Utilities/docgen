@@ -1,10 +1,11 @@
 import { existsSync, readFileSync } from 'fs'
 import { resolve } from 'path'
 import { parse } from 'comment-json'
-import type { ARGV, Config } from '@types'
+import type { Config } from '@types'
+import { argv } from '@utils'
 import { std } from './logger'
 
-export function getConfig(argv: ARGV): Config {
+export function getConfig(): Config {
   // Get root cwd.
   const root = process.cwd()
 
@@ -53,3 +54,5 @@ export function applyDefaults(config: Config): Config {
     },
   }
 }
+
+export const config = getConfig()

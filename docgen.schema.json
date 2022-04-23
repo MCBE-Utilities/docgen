@@ -4,9 +4,12 @@
   "title": "JSON schema for MCBE Utilities docgen configuration files",
   "definitions": {
     "buildOptionsDefinition": {
+      "required": ["buildOptions"],
       "properties": {
         "buildOptions": {
           "required": ["root", "out"],
+          "description": "Docgen build options.",
+          "markdownDescription": "Docgen build options.\n\n[See more](https://mcbe-utilities.github.io/docgen/CONFIG#buildOptions)",
           "properties": {
             "root": {
               "description": "Specify the root folder in which all generated *.d.ts files are located.",
@@ -73,6 +76,8 @@
     "styleOptionsDefinition": {
       "properties": {
         "styleOptions": {
+          "description": "Docgen style options.",
+          "markdownDescription": "Docgen style options.\n\n[See more](https://mcbe-utilities.github.io/docgen/CONFIG#styleOptions)",
           "properties": {
 
           }

@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 
 import './moduleResolver'
-import { argv, getConfig } from '@utils'
+import { argv, config, std } from '@utils'
 
-// Create Gap
-console.log('')
-
-// Try Find Config
-console.log(getConfig(argv))
+std.log(argv)
+std.log(config)
+std.newline()

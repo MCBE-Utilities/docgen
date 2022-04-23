@@ -1,5 +1,5 @@
 import chalk from 'chalk'
-import { argv } from '@utils'
+import { argv, config } from '@utils'
 
 export namespace std {
   export function log(log: unknown, ...content: unknown[]): void {
@@ -10,10 +10,12 @@ export namespace std {
   }
   export function error(log: unknown, ...content: unknown[]): void {
     console.error(chalk.red('[ERROR]'), log, ...content)
-    console.log('')
   }
   export function verbose(log: unknown, ...content: unknown[]): void {
-    if (argv.verbose)
+    if (argv.verbose || config.buildOptions.verbose)
       console.debug(chalk.gray('[VERBOSE]'), log, ...content)
+  }
+  export function newline(): void {
+    console.log('')
   }
 }
