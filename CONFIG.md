@@ -47,6 +47,7 @@ all of its information so this is the most important step...
 
 #### `out`
 `required` `string`
+
 Out is the relative path from CWD execution of docgen to the folder
 where all generated MDX is outputted. This is the second most important
 step.
