@@ -5,9 +5,77 @@
   "definitions": {
     "buildOptionsDefinition": {
       "properties": {
-        "root": {
-          "description": "Specify the root folder in which all generated *.d.ts files are located.",
-          "markdownDescription": "Specify the root folder in which all generated *.d.ts files are located.\n\nSee more: https://github.com/MCBE-Utilities/docgen/blob/main/CONFIG.md#root"
+        "buildOptions": {
+          "required": ["root", "out"],
+          "properties": {
+            "root": {
+              "description": "Specify the root folder in which all generated *.d.ts files are located.",
+              "markdownDescription": "Specify the root folder in which all generated *.d.ts files are located.\n\n[See more](https://mcbe-utilities.github.io/docgen/CONFIG#root)",
+              "type": "string"
+            },
+            "out": {
+              "description": "Specify the folder to output all generated MDX files to.",
+              "markdownDescription": "Specify the folder to output all generated MDX files to.\n\n[See more](https://mcbe-utilities.github.io/docgen/CONFIG#out)",
+              "type": "string"
+            },
+            "mixins": {
+              "description": "Specify a glob or an array of glob patterns pointing to files/folders to copy to the final output.",
+              "markdownDescription": "Specify a glob or an array of glob patterns pointing to files/folders to copy to the final output.\n\n[See more](https://mcbe-utilities.github.io/docgen/CONFIG#mixins)",
+              "minItems": 1,
+              "type": [
+                "string",
+                "array"
+              ],
+              "items": {
+                "type": "string"
+              }
+            },
+            "resolvers": {
+              "description": "Provide an object of foreign module documentation resolvers.",
+              "markdownDescription": "Provide an object of foreign module documentation resolvers.\n\n[See more](https://mcbe-utilities.github.io/docgen/CONFIG#resolvers)",
+              "type": "object",
+              "additionalProperties": {
+                "type": [
+                  "object",
+                  "string"
+                ],
+                "description": "Link to concatenate foreign object names to or an object with foreign objects and their respective links.",
+                "markdownDescription": "Link to concatenate foreign object names to or an object with foreign objects and their respective links..\n\n[See more](https://mcbe-utilities.github.io/docgen/CONFIG#resolvers)",
+                "additionalProperties": {
+                  "description": "Respective link to foreign object.",
+                  "markdownDescription": "Respective link to foreign object.\n\n[See more](https://mcbe-utilities.github.io/docgen/CONFIG#resolvers)",
+                  "type": "string"
+                }
+              }
+            },
+            "ignore": {
+              "description": "Specify a glob or an array of glob ignore patterns.",
+              "markdownDescription": "Specify a glob or an array of glob ignore patterns.\n\n[See more](https://mcbe-utilities.github.io/docgen/CONFIG#ignore)",
+              "minItems": 1,
+              "type": [
+                "string",
+                "array"
+              ],
+              "items": {
+                "type": "string"
+              }
+            },
+            "verbose": {
+              "description": "Enable verbose logging.",
+              "markdownDescription": "Enable verbose logging.\n\n[See more](https://mcbe-utilities.github.io/docgen/CONFIG#verbose)",
+              "type": "boolean",
+              "default": false
+            }
+          }
+        }
+      }
+    },
+    "styleOptionsDefinition": {
+      "properties": {
+        "styleOptions": {
+          "properties": {
+
+          }
         }
       }
     }
@@ -16,7 +84,10 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/definitions/readOptionsDefinition"
+      "$ref": "#/definitions/buildOptionsDefinition"
+    },
+    {
+      "$ref": "#/definitions/styleOptionsDefinition"
     }
   ]
 }

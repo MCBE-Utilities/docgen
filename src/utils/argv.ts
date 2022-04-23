@@ -1,9 +1,11 @@
 import type { ARGV, ARGVRaw } from '@types'
+import argvRaw from '../cli'
 
 export function readRawArgv(argv: ARGVRaw): ARGV {
   return {
-    in: argv._[0],
-    out: argv._[1],
+    configPath: argv._[0],
     verbose: argv.verbose ?? false,
   }
 }
+
+export const argv = readRawArgv(argvRaw as ARGVRaw)

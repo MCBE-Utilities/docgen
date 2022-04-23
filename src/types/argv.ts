@@ -5,7 +5,6 @@ export interface ARGVRaw {
 }
 
 export interface ARGV {
-  in: string
-  out: string
+  configPath?: string
   verbose: boolean
 }
